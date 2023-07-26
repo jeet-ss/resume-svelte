@@ -52,18 +52,18 @@
 </script>
 <!-- YOU CAN DELETE EVERYTHING IN THIS PAGE -->
 
-<div class="container h-full mx-auto flex flex-col justify-center items-center">
-    <div class="container flex flex-row p-4">
-        <form class="card p-4 mx-auto flex flex-col space-y-2">
+<div class="container h-full mx-auto flex flex-col gap-4 p-4 justify-center items-center">
+    <!-- <div class="container flex flex-row p-4"> -->
+        <form class="card p-4 mx-auto flex flex-col w-1/2 space-y-2">
             <h2>Add contact</h2>
             <input bind:value={name} class="input" type="text" placeholder="Full Name" />
             <textarea bind:value={content} class="textarea" rows="4" placeholder="Enter some content." />
             <InputChip bind:value={tags} name="chips" placeholder="Enter any value..." />
             <button on:click={submitForm} type="button" class="btn variant-ghost-primary self-end ">Submit</button>
         </form>  
-    </div>
+    <!-- </div> -->
 	
-	<div class="grid grid-cols-2 gap-4">
+	<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
 		{#each $noteStore as note} 
 			<div class="card p-4 flex flex-col gap-2 relative" >
 				<button on:click={() => deleteNode(note.id)} class="btn-icon btn-icon-sm variant-filled-error -top-1.5 -right-1 ">

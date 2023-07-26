@@ -1,6 +1,6 @@
 <script lang='ts'>
 	// The ordering of these imports is critical to your app working properly
-	import '@skeletonlabs/skeleton/themes/theme-modern.css';
+	import '@skeletonlabs/skeleton/themes/theme-gold-nouveau.css';
 	// If you have source.organizeImports set to true in VSCode, then it will auto change this ordering
 	import '@skeletonlabs/skeleton/styles/skeleton.css';
 	// Most of your app wide CSS should be put in this file
@@ -8,6 +8,8 @@
 	import { AppShell, AppBar, Avatar, Drawer, drawerStore, Toast, Modal, LightSwitch  } from '@skeletonlabs/skeleton';
 	import {page} from '$app/stores'
 	import Navigation from '$lib/components/Navigation.svelte';
+	import FooterPage from '$lib/components/Footer_Page.svelte';
+	import { goto } from '$app/navigation';
 
 	$: classesSidebar = $page.url.pathname === '/' ? 'w-28' : 'w-40';
 	
@@ -23,6 +25,9 @@
 	function drawerOpen() {
 		drawerStore.open(drawerSettings);
 	}
+	function scrollHandler(event) {
+		console.log(event.currentTarget.scrollTop);
+	}
 	
 </script>
 
@@ -37,7 +42,7 @@
 </Drawer>
 
 
-<AppShell slotSidebarLeft="bg-surface-500/5 scroll-behavior:smooth {classesSidebar}">
+<AppShell slotSidebarLeft="bg-surface-500/5 scroll-behavior:smooth {classesSidebar}"  on:scroll={scrollHandler}>
 	<svelte:fragment slot="header">
 		<AppBar>
 			<svelte:fragment slot="lead">
@@ -54,18 +59,24 @@
 				<LightSwitch />
 				<Avatar initials="Js" width="w-10" background="bg-primary-700/70" 
 				border="border-4 border-surface-300-600-token hover:!border-primary-500"
-				cursor="cursor-pointer"/>
+				cursor="cursor-pointer" on:click={() =>{goto('/')}}/>
 			</svelte:fragment>
 		</AppBar>
 	</svelte:fragment>
-	<svelte:fragment slot="sidebarLeft">
-		
-	</svelte:fragment>
+	<!-- <svelte:fragment slot="sidebarLeft"></svelte:fragment>
 	<svelte:fragment slot="sidebarRight"></svelte:fragment>
-	<svelte:fragment slot="pageHeader"></svelte:fragment>
+	<svelte:fragment slot="pageHeader"></svelte:fragment> -->
 	<!-- Router Slot -->
 	<slot />
 	<!-- ---- / ---- -->
-	<svelte:fragment slot="pageFooter"></svelte:fragment>
-	<svelte:fragment slot="footer"></svelte:fragment>
+	<!-- <svelte:fragment slot="pageFooter"></svelte:fragment> -->
+	<svelte:fragment slot="footer">
+		<FooterPage />
+	</svelte:fragment>
 </AppShell>
+
+<style>
+	:global(html) {
+		scroll-behavior: smooth;
+	}
+  </style>

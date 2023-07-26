@@ -1,5 +1,6 @@
 <script>
-    import { Accordion, AccordionItem } from "@skeletonlabs/skeleton";
+    import Skills from "$lib/components/Skills.svelte";
+import { Accordion, AccordionItem } from "@skeletonlabs/skeleton";
     
     let listData = [
             {   id: "1",
@@ -32,10 +33,10 @@
     
 </script>
 
-<div class="container h-full mx-auto flex flex-row gap-4 p-4 justify-top items-baseline">
+<div class="container h-full mx-auto flex flex-row gap-4 p-4 justify-top items-center">
     
     
-    <div class="w-full h-half text-token card p-4 space-y-4">
+    <div class="card card-hover p-4 space-y-4">
         <!-- <dl class="list-dl"> -->
             <h1>Experiences</h1>
                 <Accordion>
@@ -76,7 +77,7 @@
                              <br />
                             <div class="flex flex-row gap-2">
                                 {#each v.tags as tag}
-                                <span class="chip variant-filled">{tag}</span>
+                                <span class="chip variant-filled bg-surface-500/80 dark:bg-surface-300">{tag}</span>
                                 {/each}
                             </div>
                         </svelte:fragment>
@@ -85,7 +86,7 @@
                 </Accordion>
                 
     </div>
-    <div class="w-full h-half text-token card p-4 space-y-4">
+    <!-- <div class="w-full h-half text-token card p-4 space-y-4">
         <h1>Education</h1>
                 <Accordion>
                     {#each listData as v}
@@ -119,7 +120,6 @@
 
                                     </span>
                                 </div>
-                                <!-- ... -->
                                 {/each}
                             </dl>
                              <br />
@@ -133,6 +133,9 @@
                     {/each}
                 </Accordion>
                 
+    </div> -->
+    <div class="card card-hover text-token p-2 space-y-0  ">
+        <Skills />
     </div>
-
+    
 </div>

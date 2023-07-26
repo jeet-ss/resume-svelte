@@ -1,11 +1,23 @@
 <script>
 	import { goto } from '$app/navigation';
     import Exp from '$lib/components/Exp.svelte';
+	import { fade, fly } from 'svelte/transition';
+
+
+    function handleAnchorClick (event) {
+		event.preventDefault()
+		const link = event.currentTarget
+		const anchorId = new URL(link.href).hash.replace('#', '')
+		const anchor = document.getElementById(anchorId)
+		window.scrollTo({
+			top: anchor.offsetTop,
+			behavior: 'smooth'
+		})
+	}
 </script>
-<html lang="en">
-<div class="container h-full mx-auto flex flex-col justify-center items-center p-4">
+<div class="container mx-auto flex flex-col md:overflow-x-auto justify-center items-center p-4 overflow-x-scroll">
     <h1  class="text-2xl">About Me</h1>
-    <div class="flex flex-row gap-8 basis-5 shrink items-center">
+    <div class="flex flex-col md:flex-row gap-8 basis-5 shrink items-center">
         <img src='/favicon.png' alt="face with shirt">
         <div class="flex flex-col  gap-4">
             <p>
@@ -18,27 +30,35 @@
             </p>
         </div>
     </div>
-    <div class="flex flex-row gap-4">
+    <div class="inline-flex flex-col md:flex-row gap-4">
         <button class="btn variant-ghost-primary">
             Resume
         </button>
         <button class="btn variant-ghost-secondary" on:click={() => {goto('/project')}}>
             My Projects
         </button>
-        <button class="btn variant-ghost-tertiary" >
-            Work Experiences
+        <button class="btn variant-ghost-tertiary" on:click={()=>{goto('#two')}} >
+            Work
         </button>
     </div>
-    <Exp />
+    <div in:fade={{  duration: 2000 }} out:fade={{  duration: 10 }} class="">
+        <Exp />
+    </div>
+    <div id="anchor-10" in:fade={{  duration: 1000 }} class="">
+        <Exp />
+    </div>
+    
 
 </div>
-</html>
+
+
 <style>
 	img {
 	max-width: 40%;
 	max-height: 40%;
 	}
-    html {
-  scroll-behavior: smooth;
-}
+    :global(html){
+        scroll-behavior: smooth;
+    }
+    
 </style>

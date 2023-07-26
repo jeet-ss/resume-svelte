@@ -36,3 +36,34 @@ export const projectsData = [
     repo: '', // if no repo, the button will not show up
 },
 ];
+
+export const educationData = [
+    {
+        id: "1",
+        title: 'Master Of Science In Articial Intelligence',
+        date: "18 Oct 2021 - Current",
+        institute: 'Friedrich-Alexander University, Erlangen-Nürnberg',
+        address: 'Schloßplatz 4, 91054 Erlangen',
+        url: 'https://www.fau.eu',
+        repo: '', // if no repo, the button will not show up
+    },
+    {
+        id: "2",
+        title: 'Bachelor of Technology In Electronics and Communication',
+        date: "7 Aug 2015 - 5 May 2019",
+        institute: 'National Institute of Technology, Durgapur',
+        address: ' Mahatma Gandhi Rd, A-Zone, 713209 Durgapur (India)',
+        grade: '1.3',
+        url: 'https://www.nitdgp.ac.in',
+        repo: '', // if no repo, the button will not show up
+    },
+    {
+        id: "3",
+        title: 'Higher Secondary',
+        date: "5 Apr 2012 - 5 Apr 2014",
+        institute: 'Calcutta Airport English High School',
+        address: 'Kolkata, India',
+        url: '',
+        repo: '', // if no repo, the button will not show up
+    },
+    ];

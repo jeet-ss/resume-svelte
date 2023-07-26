@@ -18,9 +18,9 @@
   </script>
 
 
-<div class="container h-full mx-auto flex flex-col gap-8 justify-top items-center">
+<div class="container h-full w-full md:w-screen mx-auto flex flex-col gap-8 justify-top items-center" out:fly={{ y: -100  ,duration: 1000}}>
 	
-	<img src={cover_img} alt="two arms touching" class="w-full" />
+	<img src="/cover_bg.jpg" alt="two arms touching" class="w-full md:w-screen" />
 	{#if visible}
     <h1>Hi, my name is <span in:typewriter={{ speed: 2 }} out class="text-2xl hover:font-sans hover:italic">JEET SEN SARMA</span></h1>
 	{/if}
