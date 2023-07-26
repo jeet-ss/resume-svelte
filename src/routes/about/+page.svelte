@@ -15,10 +15,10 @@
 		})
 	}
 </script>
-<div class="container mx-auto flex flex-col md:overflow-x-auto justify-center items-center p-4 overflow-x-scroll">
+<div class="container mx-auto flex flex-col justify-center items-center p-4 overflow-x-scroll md:overflow-x-auto">
     <h1  class="text-2xl">About Me</h1>
-    <div class="flex flex-col md:flex-row gap-8 basis-5 shrink items-center">
-        <img src='/favicon.png' alt="face with shirt">
+    <div class="flex flex-col lg:flex-row gap-8 basis-5 shrink items-center">
+        <img src='/profile.jpg' alt="face with shirt">
         <div class="flex flex-col  gap-4">
             <p>
                 Hi, I am Jeet. I am an AI enthusiast and my Research interest includes Music/Audio Processing, <br>
