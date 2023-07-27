@@ -18,11 +18,11 @@
   </script>
 
 
-<div class="container h-full w-full md:w-screen mx-auto flex flex-col gap-8 justify-top items-center" out:fly={{ y: -100  ,duration: 1000}}>
+<div class="container mx-auto flex flex-col gap-8 justify-top items-center" out:fly={{ y: -100  ,duration: 1000}}>
 	
 	<img src="/cover_bg.jpg" alt="two arms touching" class="w-full md:w-screen" />
 	{#if visible}
-    <h1>Hi, my name is <span in:typewriter={{ speed: 2 }} out class="text-2xl hover:font-sans hover:italic">JEET SEN SARMA</span></h1>
+    <h1 class="inline-flex flex-col sm:flex-row">Hi, my name is <span in:typewriter={{ speed: 2 }} out class="text-2xl hover:font-sans hover:italic">JEET SEN SARMA</span></h1>
 	{/if}
 	<div>
 		{#if visible}
