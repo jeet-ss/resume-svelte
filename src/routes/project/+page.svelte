@@ -7,7 +7,7 @@
 <div class="container  mx-auto flex flex-col gap-4 p-4 justify-top items-center">
 	{#each projectsData as proj, idx}
 		<!-- Detailed -->
-		<a class="card ng-initial flex {((idx%2)!=0) ? 'flex-col md:flex-row ' : 'flex-col md:flex-row-reverse' } card-hover overflow-hidden" href={proj.url}>
+		<a class="card ng-initial flex {((idx%2)!=0) ? 'flex-col lg:flex-row ' : 'flex-col lg:flex-row-reverse' } card-hover overflow-hidden" href={proj.url}>
 			<header>
 				<img src={proj.img} class="bg-black/50 w-auto aspect-auto" alt="Post" />
 			</header>
