@@ -70,9 +70,9 @@
 
 
 <!-- <div class="w-full h-half text-token card p-4 space-y-4"> -->
-<div class=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3  auto-cols-max hover:auto-cols-min p-2 ">
+<div class="flex flex-row gap-2 lg:grid lg:grid-cols-3 overflow-x-auto lg:overflow-hidden  p-2 ">
     {#each demoArr as item, idx}
-        <div class="flex gap-4 p-2 place-content-center ">
+        <div class="max-lg:card inline-flex gap-4 p-2 ">
                 <ProgressRadial value={item.value} stroke={200} meter="stroke-surface-500/80 dark:stroke-surface-300" track="stroke-surface-500/20" width={((idx%2)==0) ? "w-40" : "w-32"}  >
                     {item.name}
                 </ProgressRadial>

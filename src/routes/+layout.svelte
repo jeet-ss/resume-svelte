@@ -63,6 +63,11 @@
 			</svelte:fragment>
 		</AppBar>
 	</svelte:fragment>
+	<!-- <svelte:fragment slot="sidebarLeft">
+		<div>
+			<Navigation />
+		</div>
+	</svelte:fragment> -->
 	<!-- <svelte:fragment slot="sidebarLeft"></svelte:fragment>
 	<svelte:fragment slot="sidebarRight"></svelte:fragment>
 	<svelte:fragment slot="pageHeader"></svelte:fragment> -->

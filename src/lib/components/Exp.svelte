@@ -99,8 +99,8 @@ let demoArr= [
                         </svelte:fragment>
                         <svelte:fragment slot="summary">
                             <div class="flex flex-col sm:flex-row gap-2 justify-between">
-                                <span>{v.label}</span> 
-                                <span>{v.date}</span>
+                                <span class="text-ellipsis overflow-hidden whitespace-normal">{v.label}</span> 
+                                <span class="text-ellipsis overflow-hidden whitespace-normal">{v.date}</span>
                             </div>                            
                         </svelte:fragment>
                         <svelte:fragment slot="content">
@@ -112,7 +112,7 @@ let demoArr= [
                                                 <circle cx="25" cy="25" r="15" stroke="black" stroke-width="3" fill="surface-100" />
                                             </svg>
                                         </span>
-                                        <span class="text-ellipsis overflow-hidden">
+                                        <span class="text-ellipsis overflow-hidden whitespace-pre-wrap">
                                             
                                             <dd>{con}</dd>
 
@@ -133,7 +133,7 @@ let demoArr= [
                 
     </div>
     
-    <div class=" card card-hover p-4 space-y-4">
+    <div class="lg:card lg:card-hover p-4 space-y-4">
        
         <section class="p-4">
             <Skills />

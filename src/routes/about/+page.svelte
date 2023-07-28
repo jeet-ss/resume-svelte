@@ -15,9 +15,9 @@
 		})
 	}
 </script>
-<div class="container mx-auto flex flex-col justify-center items-center p-4 overflow-x-scroll md:overflow-x-auto">
+<div class="container mx-auto flex flex-col justify-center items-center p-4 gap-2 overflow-x-scroll md:overflow-x-auto">
     <h1  class="text-2xl">About Me</h1>
-    <div class="flex flex-col lg:flex-row gap-8 basis-5 shrink items-center">
+    <div class="flex flex-col lg:flex-row gap-4 basis-5 shrink items-center">
         <img src='/profile.jpg' alt="face with shirt">
         <div class="flex flex-col  gap-4">
             <p>

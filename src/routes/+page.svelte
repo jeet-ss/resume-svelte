@@ -20,9 +20,9 @@
 
 <div class="container mx-auto flex flex-col gap-8 justify-top items-center" out:fly={{ y: -100  ,duration: 1000}}>
 	
-	<img src="/cover_bg.jpg" alt="two arms touching" class="w-full md:w-screen" />
+	<img src="/cover_bg.jpg" alt="two arms touching" class="w-full md:w-screen aspect-auto overflow-auto " />
 	{#if visible}
-    <h1 class="inline-flex flex-col sm:flex-row">Hi, my name is <span in:typewriter={{ speed: 2 }} out class="text-2xl hover:font-sans hover:italic">JEET SEN SARMA</span></h1>
+    <h1 class="inline-flex flex-col sm:flex-row gap-2">Hi, I am <span in:typewriter={{ speed: 2 }} out class="text-2xl hover:font-sans hover:italic">JEET SEN SARMA</span></h1>
 	{/if}
 	<div>
 		{#if visible}
